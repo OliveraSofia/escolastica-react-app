@@ -1,2 +1,11 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h1>{{Bienvenido}}</h1>
+{{#if know}} 
+<p>Welcome to {{name}} <a href="/salir">"Salir"</a></p>
+{{/if}}
+
+{{#unless know}}
+<p>Acceso denegado</p>
+<form action="/ingresar" method=post>
+<input type="text" name="name"><button>ingresar</button>
+</form>
+{{/unless}}
