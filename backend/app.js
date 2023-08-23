@@ -60,8 +60,15 @@ app.get('/', function(req,res){
   });
 });
 
-
+/*
 app.post('/admin/login', function(req,res){
+  if (req.body.name){
+    req.session.name = req.body.name
+  }
+  res.redirect('/');
+})*/
+
+app.post('/ingresar', function(req,res){
   if (req.body.name){
     req.session.name = req.body.name
   }
