@@ -11,4 +11,6 @@ return rows[0];
     console.log(error);
  }
 }
+
+
 module.exports = { getUserData }

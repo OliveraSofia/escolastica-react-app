@@ -61,7 +61,7 @@ app.get('/', function(req,res){
 });
 
 
-app.post('/ingresar', function(req,res){
+app.post('/admin/login', function(req,res){
   if (req.body.name){
     req.session.name = req.body.name
   }
@@ -88,5 +88,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;

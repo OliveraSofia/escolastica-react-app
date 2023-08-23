@@ -1,19 +1,19 @@
-
+ <div class="container">  
+<div class="row"></div>
 <form action="/admin/login" method="post" >
-  <div class="row mb-3">
-    <label for="input" class="col-sm-2 col-form-label">Usuario</label>
-    <div class="col-sm-10">
-      <input type="usuario" class="form-control" id="inputEmail" name="usuario">
+
+   
+    <div class="form-group">
+       <label for="input" class="col-sm-2 col-form-label">Usuario</label>
+      <input type="text" class="form-control" placeholder="usuario">
     </div>
-  </div>
-  <div class="row mb-3">
+  <div class="form-group">
     <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword" name="clave">
-    </div>
+      <input type="password" class="form-control" placeholder="clave">
   </div>
   <button type="submit" class="btn btn-primary">Sign in</button>
 </form>
+ </div>
 {{#if error}}
  <p>Usuario o clave Incorrecto</p>
 {{/if}}

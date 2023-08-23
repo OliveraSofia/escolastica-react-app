@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var usuarioModel = require('./../../models/usuariosModel') ;
-/* GET home page. */
+/* GET login page. */
 router.get('/', function(req, res, next) {
   res.render('admin/login'
  // ,{layout: 'admin/layout'}
@@ -22,6 +22,7 @@ if (data != undefined){
   res.render('admin/novedades');
 } else {
   res.render('admin/login'
+  
  // ,{layout: 'admin/layout', error: true    }
  );
 }
