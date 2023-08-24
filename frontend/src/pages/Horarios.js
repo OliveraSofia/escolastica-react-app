@@ -4,9 +4,9 @@ const Horarios = (props) => {
       <div className="HorariosCont">
 
         <div className="horariosMeditacion">
-          <h2>
+          <h4>
             <p>Profesorado Meditacion   </p>
-          </h2>
+          </h4>
           <table class="table">
             <thead>
               <tr>
@@ -48,9 +48,9 @@ const Horarios = (props) => {
         </div>
 
         <div className="horariosProfesoradoYoga">
-          <h2>
+          <h4>
             <p> Profesorado Yoga</p>
-          </h2>
+          </h4>
           <table class="table">
             <thead>
               <tr>
@@ -93,9 +93,9 @@ const Horarios = (props) => {
 
 
         <div className="horariosFilosofia">
-          <h2>
+          <h4>
             <p>Escuela de  Meditacion   </p>
-          </h2>
+          </h4>
           <table class="table">
             <thead>
               <tr>
@@ -138,9 +138,9 @@ const Horarios = (props) => {
 
 
         <div className="horariosMeditacionGuiada">
-          <h2>
+          <h4>
             <p>Meditaciones guiadas   </p>
-          </h2>
+          </h4>
           <table class="table">
             <thead>
               <tr>
@@ -165,9 +165,9 @@ const Horarios = (props) => {
         </div>
 
         <div className="horariosYoga">
-          <h2>
+          <h4>
             <p>Yoga Externos</p>
-          </h2>
+          </h4>
           <table class="table">
             <thead>
               <tr>

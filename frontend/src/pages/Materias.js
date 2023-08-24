@@ -5,9 +5,9 @@ const Materias = (props) => {
             <div className="MateriasCont">
 
                 <div className="materiasMeditacion">
-                    <h2>
+                    <h4>
                         <p>Profesorado Meditacion   </p>
-                    </h2>
+                    </h4>
                     <h5>
                         <p>Primer Año:   Teaoria y Practica		Filosofia		Practica I </p>
                     </h5>
@@ -21,9 +21,9 @@ const Materias = (props) => {
                 </div>
 
                 <div className="materiasYoga">
-                    <h2>
+                    <h4>
                         <p> Profesorado Yoga</p>
-                    </h2>
+                    </h4>
                     <h5>
                         <p>Primer Año: Yoga y Salud Filosofia	Practica I </p>
                     </h5>
@@ -37,9 +37,9 @@ const Materias = (props) => {
 
 
                 <div className="materiasFilosofia">
-                    <h2>
+                    <h4>
                         <p>Escuela de  Meditacion   </p>
-                    </h2>
+                    </h4>
                     <h5>
                         <p>Primer Año: Filosofia		Practica I </p>
                     </h5>
