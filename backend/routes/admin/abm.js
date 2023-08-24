@@ -3,8 +3,8 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('admin/novedades',{
-    //layout
+  res.render('admin/abm',{
+    layout: 'admin/layout',  
     usuario: req.session.nombre,
   });
 });

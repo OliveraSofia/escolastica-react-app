@@ -1,11 +1,14 @@
 # Getting Started with Escolastica
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este Projecto Cuenta por el momento con dos ambientes Frontend y Backend
+## Para correr el backend:
 
-## Available Scripts
+desde la carpeta raiz sitio:  cd .\backend\
+### `npm start`
 
-In the project directory, you can run:
+## Para correr el frontend:
 
+desde la carpeta raiz sitio:  cd .\frontend\
 ### `npm start`
 
 Runs the app in the development mode.\

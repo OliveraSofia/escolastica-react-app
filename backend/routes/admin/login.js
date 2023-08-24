@@ -21,7 +21,7 @@ var data = await usuarioModel.getUserData(usuario,clave);
 if (data != undefined){
  req.session.id_usuario = data.id;
   req.session.nombre = data.usuario;
-  res.render('admin/novedades');
+  res.render('admin/abm');
 } else {
   res.render('admin/login'
  , {layout: 'admin/layout', 
