@@ -6,8 +6,7 @@ var usuarioModel = require('./../../models/usuariosModel');
 
 /* GET login page. */
 router.get('/', function(req, res, next) {
-  res.render('admin/login'
- // ,{layout: 'admin/layout'}
+  res.render('admin/login' ,{layout: 'admin/layout'}
   );
     
 });
@@ -25,10 +24,9 @@ if (data != undefined){
   res.render('admin/novedades');
 } else {
   res.render('admin/login'
-  
- // ,{layout: 'admin/layout', 
- , {error: true}
- );console.log("no session")
+ , {layout: 'admin/layout', 
+  error: true}
+ )
 }
 }catch (error){
 console.log(error);
