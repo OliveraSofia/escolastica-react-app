@@ -32,6 +32,15 @@ if (data != undefined){
 console.log(error);
 }
 });
+
+
+router.get('/logout', function(req, res, next) {
+  req.session.destroy();
+  res.render('admin/login' ,{layout: 'admin/layout'}
+  );
+    
+});
+
 module.exports = router;
 
 
