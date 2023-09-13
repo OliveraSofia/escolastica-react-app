@@ -1,6 +1,5 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
 <div class="container-title">
   <div class="row">
     <div class="col">
@@ -31,9 +30,9 @@
       <tbody>
         {{#each abm}}
         <tr>
-          <th scope="row">{{id}}</th>
-          <td>{{nombre_materia}}</td>
-          <td>{{descripcion_materia}}</td>
+          <th scope="row">{{materias.id}}</th>
+          <td>{{materias.nombre_materia}}</td>
+          <td>{{materias.descripcion_materia}}</td>
           <td class="text-center"></td>
         </tr>
       {{/each}}

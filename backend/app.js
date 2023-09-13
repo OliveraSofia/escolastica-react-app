@@ -25,9 +25,11 @@ app.use(session({
   reserve: false,
   saveUninitialized: true
 }));
+
 secured = async function(req,res,next){
   try{
     console.log(req.session.id_usuario);
+    console.log("secure");
     if(req.session.id_usuario){
       next();
     } else {
@@ -49,36 +51,6 @@ app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/abm', secured, adminRouter);
 
-
-app.get('/', function(req,res){
-  var know = Boolean(req.session.name);
-
-  res.render('index' , {
-    title: "Inicio de sesion",
-    know:know,
-    name: req.session.name
-  });
-});
-
-/*
-app.post('/admin/login', function(req,res){
-  if (req.body.name){
-    req.session.name = req.body.name
-  }
-  res.redirect('/');
-})
-
-app.post('/ingresar', function(req,res){
-  if (req.body.name){
-    req.session.name = req.body.name
-  }
-  res.redirect('/');
-})
-
-app.get('/salir', function(req,res){
-    req.session.destroy();
-    res.redirect('/');
-  });*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

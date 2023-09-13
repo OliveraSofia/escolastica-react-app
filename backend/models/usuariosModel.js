@@ -9,6 +9,7 @@ var rows = await pool.query(query, [usuario, md5(clave)]);
 return rows[0];
  } catch (error) {
     console.log(error);
+    throw error;
  }
 }
 
