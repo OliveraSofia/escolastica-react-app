@@ -3,12 +3,12 @@ var router = express.Router();
 var usuariosModel = require('./../../models/usuariosModel');
 
 
-/* GET login page. */
+/* GET login page. 
 router.get('/', function ( req, res, next) {
-  res.render('admin/login', { layout: 'admin/layout' }
+  res.redirect('admin/abm', { layout: 'admin/layout' }
   );
 
-});
+});*/
 
 router.post('/', async function(req, res, next) {
   try {
@@ -18,12 +18,14 @@ router.post('/', async function(req, res, next) {
     var data = await usuariosModel.getUserData(usuario, clave);
 
     if (data != undefined) {
+       
       req.session.id_usuario = data.id;
       req.session.nombre = data.usuario;
-      res.render('admin/abm',  { layout: 'admin/layout' });
-      console.log(data)
+      res.redirect('http://localhost:3000/admin/abm');
     } else {
       res.render('admin/login'
+     ,
+           console.log("loguin")
         , {
           layout: 'admin/layout',
           error: true

@@ -28,8 +28,6 @@ app.use(session({
 
 secured = async function(req,res,next){
   try{
-    console.log(req.session.id_usuario);
-    console.log("secure");
     if(req.session.id_usuario){
       next();
     } else {
@@ -69,4 +67,4 @@ app.use(function(err, req, res, next) {
 });
 
 
-module.exports = app;
+module.exports=app;
