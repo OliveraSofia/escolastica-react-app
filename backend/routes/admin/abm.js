@@ -13,11 +13,11 @@ router.get('/', async function (req, res) {
   });
 });
 
-router.post('/save', async (req) =>{ 
+router.post('/save', async (req, res) =>{ 
   var add = await abmModel.addSignature(req.body);
   console.log("guardar")
   try{
-    if(req.body.id != "" && 
+    if(
     req.body.curso_id != "" && 
     req.body.nombre_materia != "" &&
      req.body.descripcion_materia != "" &&
@@ -25,6 +25,7 @@ router.post('/save', async (req) =>{
      req.body.horario_materia != "" &&
      req.body.aula != ""){
    add
+   res.redirect('http://localhost:3000/admin/abm');
   }
   else{ error: true, message='Complete el formulario';} 
   }catch(error){
