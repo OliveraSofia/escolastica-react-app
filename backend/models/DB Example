@@ -1,0 +1,105 @@
+use escolastica;
+
+
+CREATE TABLE curso (
+    id int(3),
+	nombre_curso varchar(100),
+    descripcion_curso varchar(1000),
+    costo int(40),
+    matricula int(40),
+    PRIMARY KEY (id) );
+    
+CREATE TABLE materias (
+    id int(3),
+	nombre_materia varchar(100),
+    descripcion_materia varchar(1000),
+    profesor_materia varchar(20),
+    horario_materia varchar(20),
+    aula varchar(15)
+);
+    CREATE TABLE miembros (
+    id int(3),
+	apenom_miembro varchar(50),
+    telefono varchar(15),
+    direccion varchar(100),
+    categoria varchar(50),
+    secretaria varchar(100),
+    curso varchar(100),
+    PRIMARY KEY (id) );
+    
+    CREATE TABLE usuarios (
+    id int(30),
+    usuario varchar(12),
+    clave varchar(100),
+    estado varchar (100),
+    PRIMARY KEY (id));
+    
+INSERT INTO `escolastica`.`usuarios`
+(`id`,
+`usuario`,
+`clave`,
+`estado`)
+VALUES
+(02,
+'flavia',
+MD5('1234'),
+'Activo');
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'ganeshA84.';
+
+INSERT INTO `escolastica`.`materias`
+(
+`nombre_materia`,
+`descripcion_materia`,
+`profesor_materia`,
+`horario_materia`,
+`aula`
+)
+VALUES
+(
+'Psicologiaa',
+'Enseñanzas de como funciona nuestra mente y emociones',
+'Fabian Pascuali',
+'Lunes 20.30hs',
+'Parnaso');
+
+ALTER TABLE `escolastica`.`materias` 
+ADD CONSTRAINT `curso_id`
+  FOREIGN KEY (`curso_id`)
+  REFERENCES `escolastica`.`curso` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+INSERT INTO `escolastica`.`curso`
+(`id`,
+`nombre_curso`,
+`descripcion_curso`,
+`costo`,
+`matricula`
+)
+VALUES
+(01,
+'Escuela de Filosofia',
+'enseñanzas guiadas por la diáfana luz del universalismo espiritual, tienen como fin abrir nuestros corazones a la comprensión de las verdades eternas, colmar nuestro interior de luminosidad y otorgar a nuestro espíritu una serena y perdurable felicidad.',
+10500,
+7000);
+
+
+    INSERT INTO `escolastica`.`miembros`
+(`id`,
+`apenom_miembro`,
+`telefono`,
+`direccion`,
+`categoria`,
+`secretaria`,
+`curso`
+)
+VALUES
+(01,
+'Fabian Pascuali',
+'(15)78334478',
+'Calle falsa 123 Flores Buenos Aires',
+'Director',
+'Direccion, Economia, Tecnica y mantenimiento',
+'Introduccion, Etica, metafisica, teoria meditacion 1'
+);
+
